@@ -70,7 +70,9 @@ EOF
 
 #### Install dependency
 ```bash
-pip install -e ".[dev,viz,video]"
+# choose one of the two(tb for tensorboard, wandb for wandb)
+pip install -e ".[dev,viz,video,tb]"
+pip install -e ".[dev,viz,video,wandb]"
 # Check installation of packages
 python - << 'EOF'
 import gymnasium, torch, yaml, numpy
