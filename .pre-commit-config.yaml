@@ -1,0 +1,17 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.1.14
+    hooks:
+      # Lint + autofix (import 정렬 포함)
+      - id: ruff
+        args: [--fix]
+      # Code formatter (black 대체)
+      - id: ruff-format
+
+  # 기본적인 파일 위생 체크
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace

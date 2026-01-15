@@ -1,0 +1,103 @@
+########################################
+# Python / General
+########################################
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+*.egg
+
+########################################
+# Virtual environments
+########################################
+.env
+.venv
+venv/
+ENV/
+env/
+
+# Conda
+.conda/
+conda-meta/
+
+########################################
+# Jupyter / IPython
+########################################
+.ipynb_checkpoints/
+.ipython/
+
+########################################
+# PyTorch / NumPy
+########################################
+*.pt
+*.pth
+*.ckpt
+*.npy
+*.npz
+
+########################################
+# Experiment outputs (IMPORTANT)
+########################################
+# All raw experiment outputs should NOT be versioned
+experiments/results/**
+!experiments/results/plots/
+!experiments/results/reports/
+
+# Videos recorded by gymnasium
+experiments/**/videos/
+
+# TensorBoard logs
+**/tb/
+**/runs/
+
+########################################
+# Logging / Monitoring
+########################################
+wandb/
+wandb/**
+
+########################################
+# Gym / MuJoCo / RL specific
+########################################
+*.mp4
+*.avi
+
+# MuJoCo runtime artifacts
+mujoco_py/
+mjkey.txt
+
+########################################
+# OS-specific
+########################################
+.DS_Store
+Thumbs.db
+
+########################################
+# Editors / IDEs
+########################################
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+
+########################################
+# Coverage / Testing
+########################################
+.coverage
+htmlcov/
+.pytest_cache/
+
+########################################
+# Build / Packaging
+########################################
+build/
+dist/
+
+########################################
+# Misc
+########################################
+*.log
