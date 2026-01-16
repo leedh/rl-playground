@@ -1,8 +1,8 @@
-# RL Playground
+# RL Codebook
 
-**RL Playground** is a personal research and study repository for reinforcement learning, organized around the workflow:
+**RL Codebook** is a hands-on study repository for learning reinforcement learning from the ground up, following:
 
-**theory (math) → implementation → empirical comparison**.
+**theory (math) → code implementation → benchmark comparison**.
 
 Each algorithm is first documented with its mathematical formulation and intuition, then implemented in a clean and reproducible way, and finally evaluated in Gym/Gymnasium environments under controlled experimental conditions.
 
@@ -132,17 +132,6 @@ python -m rl.scripts.train \
 python -m rl.scripts.train \
   --config src/rl/configs/ppo_cartpole.yaml
 ```
-Execution Artifacts:
-```
-experiments/results/
-└── CartPole-v1/
-    └── ppo/
-        └── 2024-xx-xx_xx-xx-xx/
-            ├── config.yaml
-            ├── metrics.csv
-            ├── latest.pt
-            └── checkpoints/
-```
 
 #### Evaluate a Trained Agent
 
@@ -166,7 +155,7 @@ python -m rl.scripts.eval \
 experiments/results/
 └── cartpole/
     └── ppo/
-        └── 2024-01-01_12-00-00/
+        └── YYYY-MM-DD_HH-MM-SS/
             ├── config.yaml
             ├── metrics.csv
             ├── model.pt
@@ -283,12 +272,3 @@ pytest
 
 * Code style and linting are enforced via pre-commit hooks
 * Tests are intended as **guardrails**, not as formal correctness proofs
-
----
-
-## Roadmap
-
-* Full TRPO implementation
-* PPO ablations (clip range, GAE λ, entropy bonus)
-* Stabilized SAC and continuous-control benchmarks
-* Automated hyperparameter sensitivity reports

@@ -1,0 +1,21 @@
+env:
+  wrappers:
+    record_video: false
+
+train:
+  seed: 0
+  total_steps: 100000
+  log_every: 1000
+  eval_every: 10000
+  eval_episodes: 10
+  save_every: 50000
+  save_best: true
+  deterministic_torch: true
+
+logging:
+  dir: experiments/results
+  backend: ["csv", "tensorboard"]
+  flush_every: 1000
+
+paths:
+  run_dir: null

@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rl-playground"
+version = "0.1.0"
+description = "Theory-to-code RL playground with reproducible experiments."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24,<2",
+  "pyyaml>=6.0.1",
+  "gymnasium>=0.29.1",
+  "torch>=2.1",
+]
+
+[project.optional-dependencies]
+# For plotting/analysis utilities (learning curves, etc.)
+viz = [
+  "matplotlib>=3.7",
+]
+
+# For video recording with gymnasium RecordVideo (often needs these)
+video = [
+  "imageio>=2.31",
+  "imageio-ffmpeg>=0.4.9",
+  "moviepy>=1.0.3",
+  "pygame>=2.5",
+]
+
+# Development / formatting / linting / tests
+dev = [
+  "pytest>=7.4",
+  "pre-commit>=3.5",
+  "ruff>=0.1.8",
+]
+
+# Logging
+tb = [
+  "tensorboard>=2.14",
+]
+
+wandb = [
+  "wandb>=0.16",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
